@@ -9,13 +9,13 @@
 <body>
     <h1>Welcome to login portal</h1>
     <form action="admin_login.php" method="post">
-        <lable></label>
+        <lable>Username:</label>
         <input type="text" name="username" value="">
         <br>
-        <lable></label>
+        <lable>Password:</label>
         <input type="text" name="password" value="">
         <br>
-        <input type="login" name="submit" value="User Login">
+        <input type="submit" name="submit" value="User Login">
     </form>
 </body>
 </html>
