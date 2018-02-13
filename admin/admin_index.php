@@ -1,12 +1,20 @@
- Volume in drive C has no label.
- Volume Serial Number is A622-3C31
+<?php
 
- Directory of C:\wamp64\www\research assignment - login\admin
+require_once('phpscripts/config.php');
+confirm_logged_in();
 
-02/13/2018  03:04 PM    <DIR>          .
-02/13/2018  03:04 PM    <DIR>          ..
-02/13/2018  03:04 PM                 0 admin_index.php
-02/13/2018  03:02 PM    <DIR>          js
-02/13/2018  03:02 PM    <DIR>          phpscripts
-               1 File(s)              0 bytes
-               4 Dir(s)  50,127,437,824 bytes free
+?>
+
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Home Page</title>
+</head>
+<body>
+    <h1>Welcome to your admin page</h1>
+        <?php echo "<h2>Hello {$_SESSION['username']}</h2>";?>
+</body>
+</html>

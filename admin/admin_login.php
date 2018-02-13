@@ -1,13 +1,21 @@
- Volume in drive C has no label.
- Volume Serial Number is A622-3C31
-
- Directory of C:\wamp64\www\research assignment - login\admin
-
-02/13/2018  03:04 PM    <DIR>          .
-02/13/2018  03:04 PM    <DIR>          ..
-02/13/2018  03:04 PM               471 admin_index.php
-02/13/2018  03:04 PM                 0 admin_login.php
-02/13/2018  03:02 PM    <DIR>          js
-02/13/2018  03:02 PM    <DIR>          phpscripts
-               2 File(s)            471 bytes
-               4 Dir(s)  50,127,437,824 bytes free
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Login Portal</title>
+</head>
+<body>
+    <h1>Welcome to login portal</h1>
+    <form action="admin_login.php" method="post">
+        <lable></label>
+        <input type="text" name="username" value="">
+        <br>
+        <lable></label>
+        <input type="text" name="password" value="">
+        <br>
+        <input type="login" name="submit" value="User Login">
+    </form>
+</body>
+</html>
