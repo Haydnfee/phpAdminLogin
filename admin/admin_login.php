@@ -26,7 +26,7 @@
     <title>Custom Login Portal</title>
 </head>
 <body>
-    <h1>Welcome to login portal</h1>
+    <h1>Welcome to your login portal</h1>
     <form action="admin_login.php" method="post">
         <lable>Username:</label>
         <input type="text" name="username" value="">
