@@ -16,7 +16,6 @@
 	function getSingle($tbl, $col, $id) {
 		include('connect.php');
 		$querySingle = "SELECT * FROM {$tbl} WHERE {$col} = {$id}";
-		//echo($querySingle);
 		$runSingle = mysqli_query($link, $querySingle);
 
 		if($runSingle){
@@ -38,7 +37,6 @@ function filtertype($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter) {
                     WHERE {$tbl}.{$col} = {$tbl3}.{$col} 
                     AND {$tbl2}.{$col2} = {$tbl3}.{$col2} 
                     AND {$tbl2}.{$col3} = '{$filter}'";
-//    echo $queryFilter;
     $runFilter = mysqli_query($link, $queryFilter);
 
     if($runFilter){

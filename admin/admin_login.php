@@ -1,3 +1,22 @@
+<?php
+	ini_set('display_errors',1);
+	error_reporting(E_ALL);
+
+	require_once('phpscripts/config.php');
+
+	$ip = $_SERVER['REMOTE_ADDR'];
+	if(isset($_POST['submit'])) {
+		$username = trim($_POST['username']);
+		$password = trim($_POST['password']);
+		if($username !== "" && $password !== "") {
+			$result = logIn($username, $password, $ip);
+			$message = $result;
+		}else{
+			$message = "Please fill in the requred fields";
+		}
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

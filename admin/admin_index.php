@@ -15,6 +15,6 @@ confirm_logged_in();
 </head>
 <body>
     <h1>Welcome to your admin page</h1>
-        <?php echo "<h2>Hello {$_SESSION['username']}</h2>";?>
+        <?php echo "<h2>Hello {$_SESSION['user_name']}</h2>";?>
 </body>
 </html>
