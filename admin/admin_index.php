@@ -15,6 +15,8 @@ confirm_logged_in();
 </head>
 <body>
     <h1>Welcome to your admin page</h1>
-        <?php echo "<h2>Welcome {$_SESSION['user_name']}</h2>";?>
+        <?php echo "<h2>Welcome {$_SESSION['user_name']}</h2>
+        <h3>Your last login date was: {$_SESSION['lastLogin']}</h3>" //display last login message
+        ?>
 </body>
 </html>

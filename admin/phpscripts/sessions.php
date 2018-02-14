@@ -5,8 +5,7 @@
 		if(!isset($_SESSION['user_id'])){
 			redirect_to("admin_login.php");
 		}
-		('UPDATE tbl_users SET lastLogin = now()');	
-	}	
-	
+
+	}
 
 ?>
