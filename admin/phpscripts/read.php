@@ -6,7 +6,7 @@
 		if ($runAll) {
 			return $runAll;
 		} else {
-			$error = "There was a problem accessing this information... Code better.";
+			$error = "An error occured while accessing this information. Please contact your admin.";
 			return $error;
 		}
 
@@ -22,7 +22,7 @@
 			return $runSingle;
 
 			} else {
-			$error = "There was a problem accessing this information... Code better.";
+			$error = "An error occured while accessing this information. Please contact your admin.";
 			return $error;
 		}
 
@@ -42,7 +42,7 @@ function filtertype($tbl, $tbl2, $tbl3, $col, $col2, $col3, $filter) {
     if($runFilter){
         return $runFilter;
     }else{
-        $error = "There was error accessing this information. PLease contact your admin.";
+        $error = "There was error accessing this information. Please contact your admin.";
         return $error;
     }
 

@@ -12,7 +12,7 @@
 			$result = logIn($username, $password, $ip);
 			$message = $result;
 		}else{
-			$message = "Please fill in the requred fields";
+			$message = "Please fill in all required fields";
 		}
 	}
 ?>
@@ -31,7 +31,7 @@
     <?php
         date_default_timezone_set('America/Toronto');
 
-        $hour = date('D');
+        $hour = date('H');
 
         if ( $hour >= 23 && $hour <= 5) {
             echo "Still Awake?";

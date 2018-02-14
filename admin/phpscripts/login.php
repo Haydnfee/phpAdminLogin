@@ -30,7 +30,7 @@
 			// $update = ('UPDATE tbl_users SET lastLogin = now() WHERE "name" = "{$_POST["name"]}"');	//updates database with current login time
 
 		}else{
-			$message = "username or password is incorrect. <br>Please make sure your cap locks key is turned off.";
+			$message = "The username or password is incorrect.";
 			return $message;
 		}
 			echo $id;
