@@ -16,13 +16,13 @@
 				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id={$id}";
 				$updatequery = mysqli_query($link, $updatestring);
 
-				$query = "UPDATE tbl_user SET lastLogin = NOW()";
-				$query ="WHERE id = {$_SESSION['user_id']} LIMIT 1";
-				$result_set = mysqli_query($link, $query);
+				// $query = "UPDATE tbl_user SET lastLogin = NOW()";		//attempting to update user table's lastLogin with current client side time
+				// $query ="WHERE id = {$_SESSION['user_id']} LIMIT 1";
+				// $result_set = mysqli_query($link, $query);
 
-				if (!$result_set) {
-					die("Failed to connect to database");
-				}
+				// if (!$result_set) {
+				// 	die("Failed to connect to database");
+				// }
 			
 			redirect_to("admin_index.php");
 
