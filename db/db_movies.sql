@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 14, 2018 at 02:20 PM
+-- Generation Time: Feb 15, 2018 at 02:43 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -1062,9 +1062,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_name` varchar(250) NOT NULL,
   `user_pass` varchar(250) NOT NULL,
   `user_email` varchar(250) NOT NULL,
-  `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_date` timestamp NOT NULL,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `lastLogin` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `user_lastLogin` varchar(50) NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -1072,7 +1072,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `lastLogin`) VALUES
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_lastLogin`) VALUES
 (1, 'hfee', 'haydnfee', 'pass', '', '2018-02-14 03:16:00', '::1', '0000-00-00 00:00:00');
 COMMIT;
 
