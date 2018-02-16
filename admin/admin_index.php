@@ -15,7 +15,7 @@ confirm_logged_in();
 </head>
 <body>
     <h1>Welcome to your admin page</h1>
-        <?php 
+        <!-- <?php 
         
         echo "<h2>Welcome {$_SESSION['user_name']}</h2>";
         
@@ -27,6 +27,8 @@ confirm_logged_in();
 
         $updatequery = mysqli_query($link, $updatestring); //$link undefined-cant update db
         
-        ?>
+        ?> -->
+
+        <a href="admin_createuser.php">Create a User Account</a>
 </body>
 </html>
