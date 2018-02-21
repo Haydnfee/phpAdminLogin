@@ -24,6 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Custom Login Portal</title>
+    <link href="../css/main.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
     <h1>Welcome to your login portal</h1>

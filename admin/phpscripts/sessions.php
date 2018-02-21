@@ -8,9 +8,9 @@
 
 	}
 
-	fuction logged_out() {
+	function logged_out() {
 		session_destroy();
-		redirect_to("../admin_login.php")
+		redirect_to("../admin_login.php");
 	}
 
 ?>

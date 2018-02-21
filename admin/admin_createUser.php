@@ -1,7 +1,7 @@
 <?php
 
 require_once('phpscripts/config.php');
-//confirm_logged_in(); //UNCOMMENT LINE IN LIVE VER
+confirm_logged_in(); //UNCOMMENT LINE IN LIVE VER
 if(isset($_POST['submit'])) {
 
 	$fname = trim($_POST['fname']);
@@ -11,20 +11,21 @@ if(isset($_POST['submit'])) {
     $userlvl = $_POST['userlvl'];
     
 	if(empty($userlvl)){
-		$message = "Please select a user level.";
+		$message = "Select a user level to continue.";
 	}else{
 		$result = createUser($fname, $username, $password, $email, $userlvl);
 		$message = $result;
-	}
+	}	
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>User Creation</title>
+<link href="../css/main.css" rel="stylesheet" type="text/css" media="screen">
 </head>
 <body>
     <h1>Create an additional user.</h1>
@@ -49,7 +50,7 @@ if(isset($_POST['submit'])) {
 			<option value="1">Web Master
 			</option>
 		</select><br><br>
-		<input type="submit" name="submit" value="Create User">
+		<input id="submit" type="submit" name="submit" value="Create User">
     </form>
     
 </body>
