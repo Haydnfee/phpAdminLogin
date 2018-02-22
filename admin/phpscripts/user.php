@@ -6,6 +6,17 @@
         $userQuery = mysqli_query($link, $userString);
         if($userQuery) {
 
+            //random pass gen
+            function randomPassword($length, $count, $characters){
+                $character = array();
+
+                //characters array
+                $character["upperCase"] = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                $character["lowerCase"] = 'abcdefghijklmnopqrstuvwxyz';
+                $character["numbers"] = '1234567890';
+                $character["special_characters"] = '!@#%<>[]{}+_-=';
+            }
+
             //Gets current email being stored then uses mail() to send email including username and password.
             $to = $email; 
             $subject = 'Your username and password confirmation';
