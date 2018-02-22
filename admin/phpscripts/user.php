@@ -10,7 +10,6 @@
             $to = $email; 
             $subject = 'Your username and password confirmation';
             $header = "username: '$username.' '\n' password: '$password'";
-
             mail($to, $subject, $header);
         
             redirect_to("admin_index.php");

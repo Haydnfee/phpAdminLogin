@@ -33,8 +33,9 @@ input
     height: 20px;
 }
 
-#submitBTN
+#submit
 {
+    cursor: pointer;
     background-color: #b6b6b6;
     color: rgb(45, 88, 45);
     width: 30%;
