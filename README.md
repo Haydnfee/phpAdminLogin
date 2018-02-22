@@ -1,3 +1,1 @@
-Updated with user creation feature.
-
-Mailing function in user.php not working currently
+Updated with user creation feature and css.

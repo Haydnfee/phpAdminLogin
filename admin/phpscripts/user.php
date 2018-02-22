@@ -6,7 +6,7 @@
         $userQuery = mysqli_query($link, $userString);
         if($userQuery) {
 
-            //Gets current email being stored then uses mail() to send email including username and password. Does not send
+            //Gets current email being stored then uses mail() to send email including username and password.
             $to = $email; 
             $subject = 'Your username and password confirmation';
             $header = "username: '$username.' '\n' password: '$password'";

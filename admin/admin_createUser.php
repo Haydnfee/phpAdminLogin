@@ -30,7 +30,7 @@ if(isset($_POST['submit'])) {
 <body>
     <h1>Create an additional user.</h1>
     <?php if(!empty($message)){echo $message;}?>
-    <form action="admin_createUser.php" method="post">
+    <form id="createForm" action="admin_createUser.php" method="post">
 		<lable>First Name:</lable>
 		<input type="text" name="fname" value="<?php if(!empty($fname)){echo $fname;} ?>"><br><br>
 		<lable>Username:</lable>
