@@ -24,7 +24,7 @@
 			}elseif(mysqli_query($link, $loginstring) && ($firstLog = 1)) { 
 				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id='{$id}'";
 				$updatequery = mysqli_query($link, $updatestring);
-				redirect_to("admin_index.php"); //points to index when loginCount = 1
+				redirect_to("admin_index.php"); //points to index when loginCount = 1 (CURRENTLY DOES NOT REDIRECT PROPERLY)
 
 			}else{
 				$message = "The username or password is incorrect.";
