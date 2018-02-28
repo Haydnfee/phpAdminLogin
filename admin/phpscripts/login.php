@@ -13,18 +13,20 @@
 			$_SESSION['user_id'] = $id;
 			$_SESSION['user_name'] = $found_user['user_fname'];
 			$firstLoginString = "SELECT loginCount FROM tbl_user WHERE user_id='{$id}'";
-			$firstLog = mysqli_query($link, $firstLoginString);
+			$firstLogQuery = mysqli_query($link, $firstLoginString);
+			$found_userArray = mysqli_fetch_array($firstLogQuery, MYSQLI_ASSOC);
+			$firstLog = $found_userArray['loginCount'];
 
-			if(mysqli_query($link, $loginstring) && ($firstLog = 2)) {
+			if(mysqli_query($link, $loginstring) && ($firstLog == 2)) {
 				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id='{$id}'";
 				$updatestring = "UPDATE tbl_user SET loginCount = 1 WHERE user_id='{$id}'"; //sets loginCount to 1 after first login
 				$updatequery = mysqli_query($link, $updatestring);
 				redirect_to("admin_editUser.php");
 
-			}elseif(mysqli_query($link, $loginstring) && ($firstLog = 1)) { 
+			}elseif(mysqli_query($link, $loginstring) && ($firstLog == 1)) { 
 				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id='{$id}'";
 				$updatequery = mysqli_query($link, $updatestring);
-				redirect_to("admin_index.php"); //points to index when loginCount = 1 (CURRENTLY DOES NOT REDIRECT PROPERLY)
+				redirect_to("admin_index.php"); //points to index when loginCount = 1
 
 			}else{
 				$message = "The username or password is incorrect.";

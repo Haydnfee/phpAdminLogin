@@ -60,3 +60,16 @@ input
     width: 30%;
     height: 32px;
 }
+
+a
+{
+    border: 2px solid rgba(22, 134, 0, 0.6);
+    background-color: rgb(201, 201, 201);
+    padding: 5px;
+    margin-right: 30px;
+}
+
+a:last-child
+{
+    margin-right: 0px;
+}
