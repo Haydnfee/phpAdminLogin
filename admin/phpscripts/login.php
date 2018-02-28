@@ -12,16 +12,23 @@
 			$id = $found_user['user_id'];
 			$_SESSION['user_id'] = $id;
 			$_SESSION['user_name'] = $found_user['user_fname'];
-			if(mysqli_query($link, $loginstring)) {
-				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id={$id}";
+			$firstLoginString = "SELECT loginCount FROM tbl_user WHERE user_id='{$id}'";
+			$firstLog = mysqli_query($link, $firstLoginString);
+
+			if(mysqli_query($link, $loginstring) && ($firstLog = 2)) {
+				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id='{$id}'";
+				$updatestring = "UPDATE tbl_user SET loginCount = 1 WHERE user_id='{$id}'"; //sets loginCount to 1 after first login
 				$updatequery = mysqli_query($link, $updatestring);
-			
-			redirect_to("admin_index.php");
+				redirect_to("admin_editUser.php");
 
+			}elseif(mysqli_query($link, $loginstring) && ($firstLog = 1)) { 
+				$updatestring = "UPDATE tbl_user SET user_ip = '$ip' WHERE user_id='{$id}'";
+				$updatequery = mysqli_query($link, $updatestring);
+				redirect_to("admin_index.php"); //points to index when loginCount = 1
 
-		}else{
-			$message = "The username or password is incorrect.";
-			return $message;
+			}else{
+				$message = "The username or password is incorrect.";
+				return $message;
 		}
 			echo $id;
 

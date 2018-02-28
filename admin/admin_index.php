@@ -31,5 +31,8 @@ confirm_logged_in();
         ?> -->
 
         <a href="admin_createuser.php">Create a User Account</a>
+        <a href="admin_editUser.php">Edit User</a>
+		<a href="admin_deleteUser.php">Delete User</a>		
+		<a href="phpscripts/caller.php?caller_id=logout">Sign Out</a>
 </body>
 </html>
