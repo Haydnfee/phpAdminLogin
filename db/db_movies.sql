@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 20, 2018 at 03:01 AM
+-- Generation Time: Mar 01, 2018 at 03:52 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -1065,15 +1065,18 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `userlvl` varchar(50) NOT NULL,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
+  `loginCount` tinyint(1) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `userlvl`, `user_ip`) VALUES
-(1, 'haydn', 'haydnfee', 'password', '', '2018-02-19 22:46:13', '', '::1');
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `userlvl`, `user_ip`, `loginCount`) VALUES
+(1, 'haydn', 'haydnfee', 'password', 'hfeegdci@gmail.com', '2018-02-19 22:46:13', '', '::1', 1),
+(8, 'haydn', 'hfee', 'password', 'hfeegdci@gmail.com', '2018-02-21 15:56:35', '1', '::1', 1),
+(18, 'q', 'q', 'q', 'q', '2018-02-28 21:35:11', '2', '::1', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
